@@ -29,8 +29,26 @@ while win==False:
                   print()
       for i in range(6):
              for j in range(3):
-                  if bored
+                  if bored[i][j]==mark and bored [i][j+1]==mark and bored[i][j+2]==mark and bored[i][j+3]==mark:
+                         win=True
+                         print(mark,"wins!")
+      for i in range(3):
+             for j in range(6):
+                  if bored[i][j]==mark and bored [i+1][j]==mark and bored[i+2][j]==mark and bored[i+3][j]==mark:
+                         win=True
+                         print(mark+"wins!")
+      for i in range(3):
+             for j in range(3):
+                 if bored[i][j]==mark and bored [i+1][j+1]==mark and bored[i+2][j+2]==mark and bored[i+3][j+3]==mark:
+                         win=True
+                         print(mark+"wins!")
+      for i in range(5,3,-1):
 
+             for j in range(3):
+                 if bored[i][j]==mark and bored [i-1][j+1]==mark and bored[i-2][j+2]==mark and bored[i-3][j+3]==mark:
+                         win=True
+                         print(mark+"wins!")
+      
       if mark==("X "):
             mark=("O ")
       elif mark==("O "):
