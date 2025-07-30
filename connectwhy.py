@@ -1,5 +1,6 @@
 bored=[]
 win=False
+counter=0
 mark=("X ")
 for j in range(0,6):
     bored.append(["_ ","_ ","_ ","_ ","_ ","_ ","_ "])
@@ -23,6 +24,7 @@ while win==False:
             bored[1][column0]=mark
       elif bored[0][column0]==("_ "):
             bored[0][column0]=mark
+      counter=counter+1
       for i in range(0,6):
                   for k in range(0,7):
                         print(bored[i][k],end="")
@@ -43,12 +45,13 @@ while win==False:
                          win=True
                          print(mark+"wins!")
       for i in range(5,3,-1):
-
              for j in range(3):
                  if bored[i][j]==mark and bored [i-1][j+1]==mark and bored[i-2][j+2]==mark and bored[i-3][j+3]==mark:
                          win=True
                          print(mark+"wins!")
-      
+      if counter>=42:
+            win=True
+            print("Y'all tied. LOSERS!!!")
       if mark==("X "):
             mark=("O ")
       elif mark==("O "):

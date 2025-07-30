@@ -8,8 +8,3 @@
 #     else:
 #         counter(start-1,end)
 # counter(998,0)
-def factorialcounter(start):
-    start*start-1
-    factorialcounter(5)
-    print(start)
-    
