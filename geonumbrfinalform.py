@@ -1,6 +1,13 @@
 from random import randint
 import pygame
 pygame.init()
+S_W=500
+S_H=500
+screen=pygame.display.set_mode((S_W,S_H))
+pygame.display.flip()
+background=pygame.image.load("Geonumbr.png").convert()
+background=pygame.transform.scale(background,(S_W,S_H))
+pygame.display.flip()
 fr=open("highscore.txt","r")
 codes=["907", "205", "479", "480", "209", "303", "203", "202", "302", "239",
     "229", "808", "319", "208", "217", "812", "316", "270", "225", "413",
